@@ -1,6 +1,5 @@
 ### Hi there 👋
-[![frephs's GitHub stats](https://github-readme-stats.vercel.app/api?username=frephs)](https://github.com/anuraghazra/github-readme-stats)
-
+![Frephs' most used languages](https://github-readme-stats.vercel.app/api/top-langs/?username=frephs&layout=compact&theme=dark)
 
 
 <!--
