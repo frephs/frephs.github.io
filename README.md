@@ -1,5 +1,5 @@
 ### Hi there 👋
-IT Engineering student at [Polimi](https://polimi.it), he/him, likes to automate things 
+IT Engineering student at [Polimi](https://polimi.it), he/him, likes to automate things, kinda into web design
 
 ![Frephs' most used languages ](https://github-readme-stats.vercel.app/api/top-langs/?username=frephs&layout=compact&theme=dark)
 
