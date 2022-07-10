@@ -1,4 +1,4 @@
-### <img src="wave.gif" height="30px"> Hi there!
+### <img src="wave.gif" height="25px"> Hi there!
 
 IT Engineering student at [Polimi](https://polimi.it), he/him, likes to automate things
 
