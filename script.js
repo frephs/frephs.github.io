@@ -45,7 +45,7 @@ class Contact {
 let projects = [
     new Project("CountDownEsami", "https://frephs.github.io/CountDownEsami", "📅"),
     new Project("GetAulePolimi", "https://get-aule-polimi.vercel.app/", "🏫"),
-    new Project("WeirdlyWired", "https://weirdly-weired.vercel.app/", "🔠")
+    new Project("WeirdlyWired", "https://weirdly-wired.vercel.app/", "🔠")
 ]
 
 let contacts = [
