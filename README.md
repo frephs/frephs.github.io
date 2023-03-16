@@ -1,8 +1,6 @@
 ### Hi there! <img src="wave.gif" height="25px"> 
 
 IT Engineering student at [Polimi](https://polimi.it), he/him, likes to automate things
-<iframe src="http://frephs.it"></iframe>
-
 <!--
 **frephs/frephs** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
