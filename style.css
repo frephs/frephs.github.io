@@ -1,0 +1,116 @@
+@font-face {
+    font-family: 'Product Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Product Sans'), url('https://fonts.cdnfonts.com/s/13998/ProductSans-Regular.woff') format('woff');
+}
+
+html {
+    font-family: 'Product Sans', sans-serif;
+    color: white;
+    background-color: white;
+}
+
+@keyframes gradient {
+
+    0%,
+    100% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 100% 0;
+    }
+}
+
+
+#net {
+    overflow: hidden;
+    background-image: linear-gradient(5deg, #e73c7e, #23a6d5, #23d5ab, #02a741, #fae952f5, #ec7000, #ff110e, #e73c7e, #23a6d5, #23d5ab);
+    animation: gradient 120s ease infinite;
+    background-size: 20000%;
+    max-height: 50vh;
+    border-radius: 30px;
+    margin: 30px;
+}
+
+.net {
+    stroke: #FFFFFF50;
+    stroke-width: 0.2px;
+    fill: transparent;
+}
+
+#net-overlay {
+    position: absolute;
+    border-radius: 30px;
+    top: 30px;
+    width: calc(100vw - 60px);
+    left: 30px;
+    height: 50vh;
+    z-index: 99999;
+}
+
+#net-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+#info {
+    background-color: rgba(255,255,255,0.2);
+    border-left: solid 3px white;
+    margin:30px;
+    border-radius: 10px;
+    padding-right:20px;
+
+}
+
+h1 {
+    transform: translate(0, 50%);
+    position: relative;
+    color: white;
+    font-size: 5em;
+    text-align: center;
+}
+
+#container {
+    margin: 50px;
+}
+
+#projects-container, #contacts-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+#projects-container a, #contacts-container a{
+    text-decoration: none;
+    color: white;
+}
+
+.project, .contact{
+    text-decoration: none;
+    padding: 20px;
+    background-image: linear-gradient(5deg, #e73c7e, #23a6d5, #23d5ab, #02a741, #fae952f5, #ec7000, #ff110e, #e73c7e, #23a6d5, #23d5ab);
+    animation: gradient 120s ease infinite;
+    background-size: 20000%;
+    margin:30px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.project-icon, .contact-logo{
+    margin-right: 10px;
+    width:20px;
+}
+
+h2, h3, h4, h5, h6 {
+    color: black;
+}
