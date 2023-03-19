@@ -80,13 +80,19 @@ h1 {
     margin: 50px;
 }
 
-#projects-container, #contacts-container {
+#projects-container, #contacts-container, #previews-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     align-content: center;
+}
+
+@media screen and (max-width: 600px) {
+    #previews-container,  #previews-title{
+        display:none;
+    }
 }
 
 #projects-container a, #contacts-container a{
@@ -104,6 +110,65 @@ h1 {
     border-radius: 10px;
     display: flex;
     flex-direction: row;
+}
+
+.project-preview{
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px;
+    border:none;
+    zoom:0.2;
+    background-image: linear-gradient(5deg, #e73c7e, #23a6d5, #23d5ab, #02a741, #fae952f5, #ec7000, #ff110e, #e73c7e, #23a6d5, #23d5ab);
+    animation: gradient 120s ease infinite;
+    background-size: 20000%;
+}
+
+.project-preview .iframe-container{
+    transition: 500ms;
+    padding: 20px;
+    border-radius: 15px;
+    border:none;
+    width: calc(450px - 3px);
+    height:calc(270px - 3px);
+    animation: gradient 120s ease infinite;
+    background-size: 20000%;
+    background-image: linear-gradient(5deg, #e73c7e, #23a6d5, #23d5ab, #02a741, #fae952f5, #ec7000, #ff110e, #e73c7e, #23a6d5, #23d5ab);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: white solid 3px
+}
+
+.iframe-container:hover{
+    filter: none;
+    background: transparent;
+    z-index:9999;
+    background: white;
+}
+
+.iframe-title {
+    position:absolute;
+    color: white;
+    font-size:2.6em;
+}
+
+.iframe-container:hover > .iframe-title{
+    color: transparent
+}
+
+.iframe-container:hover > iframe {
+    display: block;
+}
+
+
+iframe {
+    height: 270px;
+    width: 400px;
+    display: none;
+    border:none;
+    border-radius:10px;
+    font-family: "Product Sans";
+    
 }
 
 .project-icon, .contact-logo{

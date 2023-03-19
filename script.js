@@ -18,6 +18,27 @@ class Project {
             `
         container.innerHTML += html;
     }
+
+    displayPreview() {
+        let container = document.querySelectorAll("#previews-container")[0];
+        let html =
+        `
+        <a href="${this.link}" target="blank">
+            <div class="project-preview">
+                <div class="iframe-container">
+                    <h3 class="iframe-title">${this.name}</h3>
+                    <iframe src="${this.link}">
+                    <style>
+                        
+                    </style>
+
+                    </iframe>
+                </div>
+            </div>
+        </a>
+        `
+    container.innerHTML += html;
+    }
 }
 
 class Contact {
@@ -43,9 +64,9 @@ class Contact {
 }
 
 let projects = [
-    new Project("CountDownEsami", "https://frephs.github.io/CountDownEsami", "📅"),
     new Project("GetAulePolimi", "https://get-aule-polimi.vercel.app/", "🏫"),
     new Project("WeirdlyWired", "https://weirdly-wired.vercel.app/", "🔠"),
+    new Project("CountDownEsami", "https://frephs.github.io/CountDownEsami", "📅"),
     new Project("SoME2", "https://allroadslead2rome.vercel.app/", "🌐"),
 ]
 
@@ -57,5 +78,10 @@ let contacts = [
 
 ]
 
-projects.forEach(project => project.display());
+projects.forEach(
+    project => {
+        project.display()
+        project.displayPreview()
+    }
+);
 contacts.forEach(contact => contact.display());
