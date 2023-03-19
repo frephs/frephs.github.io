@@ -136,7 +136,6 @@ h1 {
 }
 
 .project-preview .iframe-container{
-    transition: 500ms;
     border-radius: 15px;
     border:none;
     width: calc(450px - 3px);
@@ -177,6 +176,7 @@ h1 {
 
 
 iframe {
+    transition:500ms;
     padding: 20px;
     width: calc(450px - 3px);
     height:calc(270px - 3px);
@@ -195,3 +195,11 @@ iframe {
 h2, h3, h4, h5, h6 {
     color: black;
 }
+
+@media screen and (min-width: 600px) {
+    #previews-title, #projects-title, #contacts-title {
+       font-size:1.8em;
+       text-align: center;
+    }
+}    
+    
