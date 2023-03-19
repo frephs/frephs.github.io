@@ -89,6 +89,3 @@ projects.forEach(
 
 contacts.forEach(contact => contact.display());
 
-document.querySelectorAll("iframe").forach(iframe => {
-    iframe.style.fontSize = "0.7em";
-})
