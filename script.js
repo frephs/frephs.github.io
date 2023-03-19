@@ -10,7 +10,7 @@ class Project {
         let html =
             `
             <a href="${this.link}">
-                <div class="project">
+                <div class="project neumorphic">
                     <div class="project-icon">${this.icon}</div>
                     <div class="project-name">${this.name}</div>
                 </div>
@@ -23,7 +23,7 @@ class Project {
         let container = document.querySelectorAll("#previews-container")[0];
         let html =
         `
-        <a href="${this.link}" target="blank">
+        <a href="${this.link}">
             <div class="project-preview">
                 <div class="iframe-container">
                     <h3 class="iframe-title">${this.name}</h3>
@@ -53,7 +53,7 @@ class Contact {
         let html =
             `
             <a href="${this.link}">
-                <div class="contact">
+                <div class="contact neumorphic">
                         <img class="contact-logo" src="${this.logo}">
                     <div class="contact-name">${this.name}</div>
                 </div>
@@ -84,4 +84,5 @@ projects.forEach(
         project.displayPreview()
     }
 );
+
 contacts.forEach(contact => contact.display());

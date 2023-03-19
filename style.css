@@ -11,6 +11,11 @@ html {
     background-color: white;
 }
 
+.neumorphic{
+    box-shadow:  20px 20px 60px #bebebe,
+    -20px -20px 60px #ffffff;
+}
+
 @keyframes gradient {
 
     0%,
@@ -32,6 +37,8 @@ html {
     max-height: 50vh;
     border-radius: 30px;
     margin: 30px;
+    box-shadow:  20px 20px 60px #bebebe,
+    -20px -20px 60px #ffffff;
 }
 
 .net {
