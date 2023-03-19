@@ -75,6 +75,12 @@ html {
 
 }
 
+@media screen and (max-width: 600px) {
+    #info {
+        text-align:center;
+    }
+}
+
 h1 {
     transform: translate(0, 50%);
     position: relative;
