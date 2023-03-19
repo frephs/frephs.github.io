@@ -26,10 +26,11 @@ class Project {
         <a href="${this.link}">
             <div class="project-preview">
                 <div class="iframe-container">
-                    <h3 class="iframe-title">${this.name}</h3>
+                    <h3 class="iframe-title">${this.name}<br> 
+                        <span class="iframe-icon"> ${this.icon}</span>
+                    </h3>
                     <iframe src="${this.link}">
                     <style>
-                        
                     </style>
 
                     </iframe>
@@ -86,3 +87,7 @@ projects.forEach(
 );
 
 contacts.forEach(contact => contact.display());
+
+document.querySelectorAll("iframe").forach(iframe => {
+    iframe.style.fontSize = "0.7em";
+})
