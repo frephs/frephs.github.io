@@ -1,6 +1,10 @@
 ### Hi there! <img src="wave.gif" height="25px"> 
+![Visitor](https://visitor-badge.laobi.icu/badge?page_id=frephs.frephs)
 
 IT Engineering student at [Polimi](https://polimi.it), he/him, likes to automate things
+
+<!--![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=frephs&layout=compact)
+<a href="mailto:francesccogenovese@duck.com">![francescogenovese@duck.com](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)</a>
 <!--
 **frephs/frephs** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
