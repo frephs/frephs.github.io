@@ -1,8 +1,9 @@
 class Project {
-    constructor(name, link, icon) {
+    constructor(name, link, icon, preview) {
         this.name = name;
         this.link = link;
         this.icon = icon;
+        this.preview = preview
     }
 
     display() {
@@ -65,10 +66,11 @@ class Contact {
 }
 
 let projects = [
-    new Project("GetAulePolimi", "https://get-aule-polimi.vercel.app/", "🏫"),
-    new Project("WeirdlyWired", "https://weirdly-wired.vercel.app/", "🔠"),
-    new Project("CountDownEsami", "https://frephs.github.io/CountDownEsami", "📅"),
-    new Project("SoME2", "https://allroadslead2rome.vercel.app/", "🌐"),
+    new Project("GetAulePolimi", "https://get-aule-polimi.vercel.app/", "🏫", true),
+    new Project("WeirdlyWired", "https://weirdly-wired.vercel.app/", "🔠", true),
+    new Project("CountDownEsami", "https://frephs.github.io/CountDownEsami", "📅", true),
+    new Project("SoME2", "https://allroadslead2rome.vercel.app/", "🌐", true),
+    new Project("GoodreadsLibrary", "https://frephs.github.io/GoodReadsBooks", "📚", false),
 ]
 
 let contacts = [
@@ -77,13 +79,14 @@ let contacts = [
     new Contact("Telegram", "https://frephs.t.me", "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fpnggrid.com%2Fwp-content%2Fuploads%2F2021%2F04%2FTelegram-Logo-PNG-Transparent-Background-1536x1272.png&f=1&nofb=1&ipt=aebfb2a8db9f8843a5784b6d26c0a13f56150dc0b4adad7a01be4478f93163e8&ipo=images"),
     new Contact("Instagram", "https://instagram.com/frephs", "https://www.kortegaard.co.uk/wp-content/uploads/2020/06/best-solutions-of-instagram-png-transparent-png-images-unique-white-instagram-logo-outline-of-white-instagram-logo-outline-copy.png"),
     new Contact("PayPal", "https://paypal.me/frncscgnvs", "src/img/paypal.png"),
-
+    new Contact("GoodReads", "https://goodreads.com/frephs/", "src/img/goodreads.svg"),
 ]
 
 projects.forEach(
     project => {
         project.display()
-        project.displayPreview()
+        if(project.preview == true)
+            project.displayPreview()
     }
 );
 
