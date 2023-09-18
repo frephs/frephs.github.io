@@ -1,5 +1,7 @@
 @font-face {
+    
     font-family: 'Product Sans';
+    font-family: 'Exo 2', sans-serif;
     font-style: normal;
     font-weight: 400;
     src: local('Product Sans'), url('https://fonts.cdnfonts.com/s/13998/ProductSans-Regular.woff') format('woff');
@@ -31,7 +33,7 @@ html {
 
 #net {
     overflow: hidden;
-    background-image: linear-gradient(5deg, #e73c7e, #23a6d5, #23d5ab, #02a741, #fae952f5, #ec7000, #ff110e, #e73c7e, #23a6d5, #23d5ab);
+    background-image: linear-gradient(5deg, #e73c7e, #23a6d5, #23d5ab, #02a741, #f0da1bf5, #ec7000, #ff110e, #e73c7e, #23a6d5, #23d5ab);
     animation: gradient 120s ease infinite;
     background-size: 20000%;
     max-height: 50vh;
@@ -118,7 +120,6 @@ h1 {
     color: white;
 }
 
-
 .quote {
     position: relative; 
     border-left: solid 10px rgba(0, 0, 0, 0.2);
@@ -177,7 +178,7 @@ hr {
 .quote::before {
     content: "";
     background-size: cover;
-    background-image: linear-gradient(5deg, #e73c7e, #23a6d5, #23d5ab, #02a741, #fae952f5, #ec7000, #ff110e, #e73c7e, #23a6d5, #23d5ab);
+    background-image: linear-gradient(5deg, #e73c7e, #23a6d5, #23d5ab, #02a741, #f0da1bf5, #ec7000, #ff110e, #e73c7e, #23a6d5, #23d5ab);
     animation: gradient 120s ease infinite;
     background-size: 20000%;
     position: absolute;
@@ -190,11 +191,23 @@ hr {
     height: auto;
 }
 
+@media screen and (max-width: 600px) {
+
+    .quote {
+        width: 70%;
+    }
+    .quote-quote, .quote-content{
+        text-align: justify;
+        padding: 10px 0px;
+        margin:0px;
+    }
+}
+
 .project,
 .contact {
     text-decoration: none;
     padding: 20px;
-    background-image: linear-gradient(5deg, #e73c7e, #23a6d5, #23d5ab, #02a741, #fae952f5, #ec7000, #ff110e, #e73c7e, #23a6d5, #23d5ab);
+    background-image: linear-gradient(5deg, #e73c7e, #23a6d5, #23d5ab, #02a741, #f0da1bf5, #ec7000, #ff110e, #e73c7e, #23a6d5, #23d5ab);
     animation: gradient 120s ease infinite;
     background-size: 20000%;
     margin: 30px;
@@ -208,7 +221,7 @@ hr {
     margin: 15px;
     border-radius: 20px;
     border: none;
-    background-image: linear-gradient(5deg, #e73c7e, #23a6d5, #23d5ab, #02a741, #fae952f5, #ec7000, #ff110e, #e73c7e, #23a6d5, #23d5ab);
+    background-image: linear-gradient(5deg, #e73c7e, #23a6d5, #23d5ab, #02a741, #f0da1bf5, #ec7000, #ff110e, #e73c7e, #23a6d5, #23d5ab);
     animation: gradient 120s ease infinite;
     background-size: 20000%;
 }
@@ -220,7 +233,7 @@ hr {
     height: calc(270px - 3px);
     animation: gradient 120s ease infinite;
     background-size: 20000%;
-    background-image: linear-gradient(5deg, #e73c7e, #23a6d5, #23d5ab, #02a741, #fae952f5, #ec7000, #ff110e, #e73c7e, #23a6d5, #23d5ab);
+    background-image: linear-gradient(5deg, #e73c7e, #23a6d5, #23d5ab, #02a741, #f0da1bf5, #ec7000, #ff110e, #e73c7e, #23a6d5, #23d5ab);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -293,4 +306,6 @@ h6 {
     body {
         margin: 60px 120px;
     }
+
+    #
 }

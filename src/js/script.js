@@ -92,7 +92,7 @@ class Quote {
 let projects = [
     new Project("GetAulePolimi", "https://get-aule-polimi.vercel.app/", "🏫", true),
     new Project("WeirdlyWired", "https://weirdly-wired.vercel.app/", "🔠", true),
-    new Project("CountDownEsami", "https://frephs.github.io/CountDownEsami", "📅", true),
+    // new Project("CountDownEsami", "https://frephs.github.io/CountDownEsami", "📅", true),
     new Project("SoME2", "https://allroadslead2rome.vercel.app/", "🌐", true),
     new Project("GoodreadsLibrary", "https://frephs.github.io/GoodReadsBooks", "📚", false),
 ]
@@ -109,7 +109,7 @@ let contacts = [
 let quotes = [
     new Quote("Lucretius", "De rerum natura", "Rerum magnarum parva potest res <br>exemplare dare et vestigia notitiai. <br> <br>A small thing can give an example of great things <br> and impart knowledge of their traces. "),
     new Quote("Edsger W. Dijkstra", undefined, "The purpose of abstraction is not to be vague, but to create a new semantic level in which one can be absolutely precise."),
-    new Quote("Karl Marx", undefined, "In modern industry the means of production must become means of production in common, social means of production, and, as such, they are employed in common, and produce, not privately for the individual producer, but socially.  <br> <br> From each according to their ability, to everyone according to their needs. <br> <br>  The ideas of the ruling class are in every epoch the ruling ideas, i.e., the class which is the ruling material force of society, is at the same time its ruling intellectual force. ")
+    new Quote("Karl Marx", undefined, "In the modern industry the means of production must become means of production in common, social means of production, and, as such, they are employed in common, and produce, not privately for the individual producer, but socially.  <br> <br> From each according to their ability, to everyone according to their needs. <br> <br>  The ideas of the ruling class are in every epoch the ruling ideas, i.e., the class which is the ruling material force of society, is at the same time its ruling intellectual force. ")
 ]
 
 quotes.forEach(quote => quote.display());
