@@ -99,7 +99,7 @@ let projects = [
 
 let contacts = [
     new Contact("Mail", "mailto:francescogenovese@duck.com", "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fvectorified.com%2Fimages%2Femail-icon-white-png-38.png&f=1&nofb=1&ipt=dd837ef3a6fdb55d7f303a848006b5434e0a337ed6ea1b600b1233190334e1f5&ipo=images"),
-    new Contact("Github", "https://github.com/frephs", "src/img/github.svg"),
+    new Contact("GitHub", "https://github.com/frephs", "src/img/github.svg"),
     new Contact("Telegram", "https://frephs.t.me", "src/img/telegram.svg"),
     new Contact("Instagram", "https://instagram.com/frephs", "https://www.kortegaard.co.uk/wp-content/uploads/2020/06/best-solutions-of-instagram-png-transparent-png-images-unique-white-instagram-logo-outline-of-white-instagram-logo-outline-copy.png"),
     new Contact("PayPal", "https://paypal.me/frncscgnvs", "src/img/paypal.png"),
