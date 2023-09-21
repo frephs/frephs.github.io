@@ -25,7 +25,7 @@ class Project {
         let html =
             `
         <a href="${this.link}" target="_blank">
-            <div class="project-preview">
+            <div class="project-preview neumorphic">
                 <div class="iframe-container">
                     <h3 class="iframe-title">${this.name}<br> 
                         <span class="iframe-icon"> ${this.icon}</span>
