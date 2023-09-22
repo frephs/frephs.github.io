@@ -40,11 +40,11 @@ html {
     border-radius: 30px;
     margin: 30px;
     box-shadow: 20px 20px 60px #bebebe,
-        -20px -20px 60px #ffffff;
+        -20px -20px 60px #f0f0f0;
 }
 
 .net {
-    stroke: #FFFFFF50;
+    stroke: #f0f0f050;
     stroke-width: 0.2px;
     fill: transparent;
 }
