@@ -90,7 +90,7 @@ class Quote {
 }
 
 let projects = [
-    new Project("GetAulePolimi", "https://get-aule-polimi.vercel.app/", "🏫", true),
+    new Project("GetAulePolimi", "https://aule-polimi.vercel.app/", "🏫", true),
     new Project("WeirdlyWired", "https://weirdly-wired.vercel.app/", "🔠", true),
     // new Project("CountDownEsami", "https://frephs.github.io/CountDownEsami", "📅", true),
     new Project("SoME2", "https://allroadslead2rome.vercel.app/", "🌐", true),
