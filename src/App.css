@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+.App {
+  font-family: 'Inter', sans-serif;
+  background-color: #f8fafc;
+  min-height: 100vh;
+  padding: 0 80px;
+  max-width: 1800px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 1200px) {
+  .App {
+    padding: 0 120px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .App {
+    padding: 0 20px;
+  }
+}
+
+.main-content {
+  padding: 0;
+}
+
+/* Global section title styles */
+.section-title {
+  color: #333;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-family: 'Inter', sans-serif;
+  position: relative;
+}
+
+@media screen and (min-width: 1200px) {
+  .section-title {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    color: #333;
+    text-align: center;
+  }
+}
+
+/* Global wave path styles */
+.wave-path {
+  stroke: rgba(255, 255, 255, 0.15);
+  stroke-width: 0.3px;
+  fill: transparent;
+}
