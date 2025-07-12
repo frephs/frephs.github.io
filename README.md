@@ -1,72 +1,60 @@
-# Frephs Portfolio - React Version
+#Badges
+[![GitHub Pages](https://img.shields.io/github/deployments/frephs/frephs.github.io/production?label=GitHub%20Pages&logo=github)](https://frephs.github.io)
+[![License](https://img.shields.io/github/license/frephs/frephs.github.io)](https://github.com/frephs/frephs.github.io/blob/main/LICENSE)
+[![Deployment](https://img.shields.io/github/deployments/frephs/frephs.github.io/production?label=Deployment&logo=github)](https://frephs.github.io)
 
-A modern, professional portfolio website built with React and TypeScript, featuring an animated gradient wave background.
+# 👋 Francesco's Portfolio
 
-## Features
+Welcome to my personal portfolio website! This is where I showcase my projects, share some thoughts through quotes that inspire me, and provide ways to get in touch.
 
-- **Animated Wave Background**: Custom SVG-based wave animation library with flowing gradient background
-- **Professional Design**: Clean, modern neumorphic design with Inter font
-- **Responsive Layout**: Fully responsive design that works on all devices
-- **TypeScript**: Type-safe development with TypeScript
-- **Modular Components**: Reusable React components with proper separation of concerns
+## 🌟 What's Inside
 
-## Expanding the ESLint configuration
+**Projects** - A collection of my work ranging from web applications to creative coding experiments. Each project includes live previews (when available) and details about the technologies used.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+**Inspirations** - Quotes and ideas that shape my thinking.
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+**Contacts** - Multiple ways to reach me, whether for collaboration, questions, or just to say hello!
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## 🛠 Built With
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- **React** - For a modern, component-based UI
+- **TypeScript** - Type safety and better development experience
+- **Vite** - Lightning-fast build tool and dev server
+- **CSS3** - Custom styling with glassmorphic effects and smooth animations
+- **SVG Animations** - Fluid wave animations for visual appeal
+
+## 🎨 Features
+
+- **Responsive Design** - Looks great on desktop, tablet, and mobile
+- **Smooth Navigation** - Quick-jump buttons to different sections
+- **Live Previews** - See projects in action with embedded iframes
+- **Modern Aesthetics** - Clean, professional design with subtle animations
+- **Masonry Layout** - Projects flow naturally in a Pinterest-style cascade
+
+## 🚀 Development
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📦 Deployment
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+This site automatically deploys to GitHub Pages using GitHub Actions. Every push to the main branch triggers a new deployment at [frephs.github.io](https://frephs.github.io).
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 💝 Acknowledgments
+
+Built with care using modern web technologies. The wave animations add a touch of fluidity, while the glassmorphic design elements create depth without overwhelming the content.
+
+---
+
+_Feel free to explore the code, suggest improvements, or reach out if you'd like to collaborate!_
