@@ -1,7 +1,8 @@
-#Badges
-[![GitHub Pages](https://img.shields.io/github/deployments/frephs/frephs.github.io/production?label=GitHub%20Pages&logo=github)](https://frephs.github.io)
+
 [![License](https://img.shields.io/github/license/frephs/frephs.github.io)](https://github.com/frephs/frephs.github.io/blob/main/LICENSE)
-[![Deployment](https://img.shields.io/github/deployments/frephs/frephs.github.io/production?label=Deployment&logo=github)](https://frephs.github.io)
+[![Workflows](https://img.shields.io/github/actions/workflow/status/frephs/frephs.github.io/deploy.yml?branch=main&logo=npm&label=Build)](https://github.com/frephs/frephs.github.io/actions)
+[![Deployment](https://img.shields.io/github/deployments/frephs/frephs.github.io/github-pages?label=Deployment&logo=github)](https://frephs.github.io)
+
 
 # 👋 Francesco's Portfolio
 
@@ -19,8 +20,8 @@ Welcome to my personal portfolio website! This is where I showcase my projects, 
 
 - **React** - For a modern, component-based UI
 - **TypeScript** - Type safety and better development experience
-- **Vite** - Lightning-fast build tool and dev server
-- **CSS3** - Custom styling with glassmorphic effects and smooth animations
+- **Vite** - Fast and efficient 
+- **CSS3** - Custom styling
 - **SVG Animations** - Fluid wave animations for visual appeal
 
 ## 🎨 Features
@@ -51,9 +52,6 @@ npm run preview
 
 This site automatically deploys to GitHub Pages using GitHub Actions. Every push to the main branch triggers a new deployment at [frephs.github.io](https://frephs.github.io).
 
-## 💝 Acknowledgments
-
-Built with care using modern web technologies. The wave animations add a touch of fluidity, while the glassmorphic design elements create depth without overwhelming the content.
 
 ---
 

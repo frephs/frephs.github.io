@@ -7,7 +7,6 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <title>Frephs</title>
       
       <HeroSection />
       <main className="main-content">
