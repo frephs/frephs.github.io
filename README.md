@@ -1,6 +1,6 @@
 
 [![License](https://img.shields.io/github/license/frephs/frephs.github.io)](https://github.com/frephs/frephs.github.io/blob/main/LICENSE)
-[![Workflows](https://img.shields.io/github/actions/workflow/status/frephs/frephs.github.io/deploy.yml?branch=main&logo=npm&label=Build)](https://github.com/frephs/frephs.github.io/actions)
+[![Workflows](https://img.shields.io/github/actions/workflow/status/frephs/frephs.github.io/deploy.yml?branch=main&logo=Vite&label=Build)](https://github.com/frephs/frephs.github.io/actions)
 [![Deployment](https://img.shields.io/github/deployments/frephs/frephs.github.io/github-pages?label=Deployment&logo=github)](https://frephs.github.io)
 
 
