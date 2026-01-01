@@ -58,7 +58,7 @@ const projects: Project[] = [
   },
   {
     name: "YourAuction",
-    link: "https://frephs.github.io/polimi-tiw/",
+    link: "https://frephs.github.io/polimi-TIW/",
     icon: "🛒",
     preview: true,
     description:
