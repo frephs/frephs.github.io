@@ -1,5 +1,6 @@
-import React from 'react';
-import './ContactsSection.css';
+import React from "react";
+import { WaveAnimation } from "./WaveAnimation";
+import "./ContactsSection.css";
 
 interface Contact {
   name: string;
@@ -11,60 +12,69 @@ const contacts: Contact[] = [
   {
     name: "Email",
     link: "mailto:francescogenovese@duck.com",
-    logo: "/img/email.svg"
+    logo: "/img/email.svg",
+  },
+  {
+    name: "LinkedIn",
+    link: "https://linkedin.com/in/francescogenovese",
+    logo: "/img/linkedin.svg",
   },
   {
     name: "GitHub",
     link: "https://github.com/frephs",
-    logo: "/img/github.svg"
+    logo: "/img/github.svg",
   },
   {
     name: "Telegram",
     link: "https://frephs.t.me",
-    logo: "/img/telegram.svg"
+    logo: "/img/telegram.svg",
   },
   {
     name: "Instagram",
     link: "https://instagram.com/frephs",
-    logo: "/img/instagram.svg"
+    logo: "/img/instagram.svg",
   },
-  {
-    name: "PayPal",
-    link: "https://paypal.me/frncscgnvs",
-    logo: "/img/paypal.png"
-  },
+  // {
+  //   name: "PayPal",
+  //   link: "https://paypal.me/frncscgnvs",
+  //   logo: "/img/paypal.png",
+  // },
   {
     name: "GoodReads",
     link: "https://goodreads.com/frephs/",
-    logo: "/img/goodreads.svg"
-  }
+    logo: "/img/goodreads.svg",
+  },
 ];
 
 export const ContactsSection: React.FC = () => {
   return (
     <section id="contacts" className="contacts-section">
-      <h2 className="section-title">Contacts</h2>
-      <div className="contacts-grid">
-        {contacts.map((contact, index) => (
-          <a
-            key={index}
-            href={contact.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="contact-link"
-          >
-            <div className="contact-card">
-              <div className="contact-content">
-                <img 
-                  className="contact-logo" 
-                  src={contact.logo} 
-                  alt={contact.name}
-                />
-                <div className="contact-name">{contact.name}</div>
-              </div>
-            </div>
-          </a>
-        ))}
+      <div className="contacts-navbar">
+        <div className="contacts-footer-info">
+          <p className="footer-text">© 2026 Francesco Genovese</p>
+          <p className="footer-subtext">Built with React & TypeScript</p>
+        </div>
+        <div className="contacts-icons">
+          {contacts.map((contact, index) => (
+            <a
+              key={index}
+              href={contact.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="contact-icon-link"
+              title={contact.name}
+            >
+              <img
+                className="contact-icon"
+                src={contact.logo}
+                alt={contact.name}
+              />
+            </a>
+          ))}
+        </div>
+      </div>
+      <div className="contacts-waves">
+        <WaveAnimation className="wave-animation" />
       </div>
     </section>
   );

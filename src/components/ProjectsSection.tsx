@@ -114,23 +114,26 @@ export const ProjectsSection: React.FC = () => {
               </div>
             </a>
             {project.preview && (
-              <a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="preview-link"
-              >
-                <div className="project-preview">
-                  <iframe
-                    src={project.link}
-                    title={`Preview of ${project.name}`}
-                    loading="lazy"
-                  />
-                  <div className="preview-overlay">
-                    <span>Click to Open Live Site</span>
+              <>
+                <hr className="project-divider" />
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="preview-link"
+                >
+                  <div className="project-preview">
+                    <iframe
+                      src={project.link}
+                      title={`Preview of ${project.name}`}
+                      loading="lazy"
+                    />
+                    <div className="preview-overlay">
+                      <span>Click to Open Live Site</span>
+                    </div>
                   </div>
-                </div>
-              </a>
+                </a>
+              </>
             )}
           </div>
         ))}

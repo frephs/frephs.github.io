@@ -1,0 +1,618 @@
+.cv-section {
+  margin: 20px 50px 0px 50px;
+  padding: 30px 50px 0px 50px;
+  background: transparent;
+  border-radius: 28px;
+  scroll-snap-align: start;
+  scroll-margin-top: 120px;
+  min-height: calc(100vh - 160px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.cv-title {
+  color: #1a1a1a;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 15px 0;
+  text-align: center;
+  text-shadow:
+    1px 1px 2px rgba(255, 255, 255, 0.3),
+    0 0 20px rgba(255, 255, 255, 0.2);
+  font-family: 'Space Grotesk', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.cv-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.cv-bio-row {
+  display: flex;
+  gap: 20px;
+  margin: 0 auto 20px auto;
+  max-width: 1400px;
+  align-items: stretch;
+}
+
+.cv-bio-card {
+  flex: 0 1 65%;
+  max-width: 800px;
+  background:
+    linear-gradient(135deg,
+      rgba(255, 255, 255, 0.12) 0%,
+      rgba(255, 255, 255, 0.08) 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 28px;
+  padding: 20px 25px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.15),
+    0 10px 40px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+}
+
+.cv-bio-card:hover {
+  background:
+    linear-gradient(135deg,
+      rgba(255, 255, 255, 0.18) 0%,
+      rgba(255, 255, 255, 0.12) 100%);
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    0 15px 50px rgba(0, 0, 0, 0.25);
+  transform: translateY(-2px);
+}
+
+.cv-bio-text {
+  position: relative;
+  color: #1a1a1a;
+  font-size: 1.05em;
+  line-height: 1.7;
+  margin: 20px 15px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 400;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3);
+  z-index: 2;
+}
+
+.cv-bio-text::before {
+  content: '\201C';
+  font-size: 3.5em;
+  position: absolute;
+  top: -30px;
+  left: -20px;
+  color: rgba(34, 197, 94, 0.15);
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: bold;
+  z-index: 1;
+  line-height: 1;
+}
+
+.cv-bio-text::after {
+  content: '\201D';
+  font-size: 3.5em;
+  position: absolute;
+  bottom: -35px;
+  right: -20px;
+  color: rgba(34, 197, 94, 0.15);
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: bold;
+  z-index: 1;
+  line-height: 1;
+}
+
+.cv-profile-container {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cv-profile-pic {
+  width: 180px;
+  height: 180px;
+  border-radius: 28px;
+  object-fit: cover;
+  background:
+    linear-gradient(135deg,
+      rgba(255, 255, 255, 0.12) 0%,
+      rgba(255, 255, 255, 0.08) 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 3px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.15),
+    0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.cv-profile-pic:hover {
+  background:
+    linear-gradient(135deg,
+      rgba(255, 255, 255, 0.18) 0%,
+      rgba(255, 255, 255, 0.12) 100%);
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    0 15px 50px rgba(0, 0, 0, 0.25);
+  transform: scale(1.05) rotate(2deg) translateY(-2px);
+}
+
+.cv-download-button-inline {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background:
+    linear-gradient(135deg,
+      rgba(255, 255, 255, 0.2) 0%,
+      rgba(255, 255, 255, 0.12) 100%);
+  backdrop-filter: blur(15px) saturate(1.2);
+  -webkit-backdrop-filter: blur(15px) saturate(1.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 28px;
+  padding: 25px;
+  color: #1a1a1a;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+  font-size: 0.9em;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.3),
+    0 10px 40px rgba(0, 0, 0, 0.2);
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3);
+  white-space: nowrap;
+}
+
+.cv-download-button-inline:hover {
+  background:
+    linear-gradient(135deg,
+      rgba(255, 255, 255, 0.3) 0%,
+      rgba(255, 255, 255, 0.18) 100%);
+  border-color: rgba(255, 255, 255, 0.45);
+  transform: translateY(-2px);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    0 15px 50px rgba(0, 0, 0, 0.3);
+}
+
+.cv-download-button-inline .download-icon {
+  font-size: 2em;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.cv-column {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.cv-card {
+  background:
+    linear-gradient(135deg,
+      rgba(255, 255, 255, 0.12) 0%,
+      rgba(255, 255, 255, 0.08) 100%);
+  backdrop-filter: blur(20px) saturate(1.2);
+  -webkit-backdrop-filter: blur(20px) saturate(1.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.25),
+    0 10px 40px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.cv-card:hover {
+  background:
+    linear-gradient(135deg,
+      rgba(255, 255, 255, 0.18) 0%,
+      rgba(255, 255, 255, 0.12) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.35),
+    0 12px 50px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.cv-card-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #1a1a1a;
+  font-size: 1.5em;
+  font-weight: 700;
+  margin: 0 0 25px 0;
+  font-family: 'Space Grotesk', 'Inter', sans-serif;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3);
+}
+
+.cv-icon {
+  font-size: 1.2em;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.cv-items {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.cv-item {
+  padding-bottom: 25px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.cv-item:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.cv-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.cv-item-text {
+  flex: 1;
+}
+
+.cv-university-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+  transition: all 0.3s ease;
+}
+
+.cv-university-logo:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+.cv-item-title {
+  color: #1a1a1a;
+  font-size: 1.15em;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+  font-family: 'Space Grotesk', 'Inter', sans-serif;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.2);
+}
+
+.cv-item-org {
+  color: rgba(0, 0, 0, 0.75);
+  font-size: 1em;
+  font-weight: 500;
+  margin: 0 0 6px 0;
+  font-family: 'Space Grotesk', 'Inter', sans-serif;
+}
+
+.cv-item-period {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 0.9em;
+  font-weight: 500;
+  margin: 0 0 12px 0;
+  font-family: 'Space Grotesk', 'Inter', sans-serif;
+}
+
+.cv-item-location {
+  color: rgba(0, 0, 0, 0.65);
+  font-size: 0.85em;
+  font-weight: 500;
+  margin: 0 0 12px 0;
+  font-family: 'Space Grotesk', 'Inter', sans-serif;
+}
+
+.cv-item-details,
+.cv-item-description {
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 0.95em;
+  line-height: 1.6;
+  margin: 0;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.cv-card-skills {
+  align-self: flex-start;
+}
+
+.cv-skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.cv-skill-tag {
+  background:
+    linear-gradient(135deg,
+      rgba(255, 255, 255, 0.15) 0%,
+      rgba(255, 255, 255, 0.08) 100%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 10px 16px;
+  color: #1a1a1a;
+  font-size: 0.9em;
+  font-weight: 500;
+  font-family: 'Space Grotesk', 'Inter', sans-serif;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.cv-skill-tag:hover {
+  background:
+    linear-gradient(135deg,
+      rgba(255, 255, 255, 0.25) 0%,
+      rgba(255, 255, 255, 0.15) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  transform: translateY(-2px);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.3),
+    0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.cv-card-download {
+  background:
+    linear-gradient(135deg,
+      rgba(255, 99, 71, 0.12) 0%,
+      rgba(255, 20, 147, 0.1) 50%,
+      rgba(138, 43, 226, 0.1) 100%);
+  border: 1px solid rgba(255, 99, 71, 0.3);
+}
+
+.cv-card-download:hover {
+  background:
+    linear-gradient(135deg,
+      rgba(255, 99, 71, 0.18) 0%,
+      rgba(255, 20, 147, 0.15) 50%,
+      rgba(138, 43, 226, 0.15) 100%);
+  border: 1px solid rgba(255, 99, 71, 0.4);
+}
+
+.cv-download-content {
+  text-align: center;
+}
+
+.cv-download-title {
+  color: #1a1a1a;
+  font-size: 1.1em;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  font-family: 'Space Grotesk', 'Inter', sans-serif;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3);
+}
+
+.cv-download-description {
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 0.85em;
+  line-height: 1.5;
+  margin: 0 0 18px 0;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.cv-download-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  align-self: flex-start;
+  background:
+    linear-gradient(135deg,
+      rgba(255, 255, 255, 0.2) 0%,
+      rgba(255, 255, 255, 0.12) 100%);
+  backdrop-filter: blur(15px) saturate(1.2);
+  -webkit-backdrop-filter: blur(15px) saturate(1.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  padding: 10px 20px;
+  color: #1a1a1a;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+  font-size: 0.9em;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.3),
+    0 6px 20px rgba(0, 0, 0, 0.2);
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3);
+}
+
+.cv-download-button:hover {
+  background:
+    linear-gradient(135deg,
+      rgba(255, 255, 255, 0.3) 0%,
+      rgba(255, 255, 255, 0.18) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.cv-download-button:active {
+  transform: translateY(-1px) scale(1);
+}
+
+.download-icon {
+  font-size: 1.2em;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+@media screen and (max-width: 1024px) {
+  .cv-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .cv-bio-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cv-bio-card {
+    flex: 1 1 auto;
+    max-width: 100%;
+  }
+
+  .cv-profile-container {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .cv-download-button-inline {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cv-section {
+    margin: 30px 20px;
+    padding: 35px 25px;
+  }
+
+  .cv-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  .cv-bio-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cv-bio-card {
+    flex: 1 1 auto;
+    max-width: 100%;
+    padding: 30px 35px;
+    margin-bottom: 25px;
+  }
+
+  .cv-profile-container {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .cv-download-button-inline {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .cv-bio-content {
+    flex-direction: column;
+  }
+
+  .cv-bio-image {
+    order: -1;
+  }
+
+  .cv-profile-pic {
+    width: 150px;
+    height: 150px;
+  }
+
+  .cv-bio-text {
+    font-size: 1.05em;
+  }
+
+  .cv-card {
+    padding: 25px;
+  }
+
+  .cv-card-title {
+    font-size: 1.3em;
+    margin-bottom: 20px;
+  }
+
+  .cv-content {
+    gap: 25px;
+  }
+
+  .cv-column {
+    gap: 25px;
+  }
+
+  .cv-university-logo {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .cv-section {
+    margin: 15px;
+    padding: 25px 20px;
+  }
+
+  .cv-title {
+    font-size: 1.8rem;
+  }
+
+  .cv-bio-card {
+    padding: 25px 20px;
+    margin-bottom: 20px;
+  }
+
+  .cv-profile-pic {
+    width: 120px;
+    height: 120px;
+  }
+
+  .cv-bio-text {
+    font-size: 1em;
+    line-height: 1.7;
+  }
+
+  .cv-card {
+    padding: 20px;
+  }
+
+  .cv-card-title {
+    font-size: 1.2em;
+    gap: 8px;
+  }
+
+  .cv-item-title {
+    font-size: 1.05em;
+  }
+
+  .cv-skills-grid {
+    gap: 8px;
+  }
+
+  .cv-skill-tag {
+    padding: 8px 14px;
+    font-size: 0.85em;
+  }
+
+  .cv-download-button {
+    padding: 12px 24px;
+    font-size: 0.95em;
+  }
+
+  .cv-university-logo {
+    width: 40px;
+    height: 40px;
+  }
+}
