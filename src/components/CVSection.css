@@ -1,10 +1,10 @@
 .cv-section {
-  margin: 0px 50px 0px 50px;
-  padding: 30px 50px 0px 50px;
+  margin: var(--section-margin-desktop);
+  padding: var(--section-padding-desktop);
   background: transparent;
-  border-radius: 28px;
+  border-radius: var(--radius-xl);
   scroll-snap-align: start;
-  scroll-margin-top: 80px;
+  scroll-margin-top: var(--scroll-margin-top);
   min-height: calc(100vh - 300px);
   display: flex;
   flex-direction: column;
@@ -12,15 +12,13 @@
 }
 
 .cv-title {
-  color: #1a1a1a;
+  color: var(--color-text-primary);
   font-size: 2.5rem;
   font-weight: 700;
   margin: 0 0 15px 0;
   text-align: center;
-  text-shadow:
-    1px 1px 2px rgba(255, 255, 255, 0.3),
-    0 0 20px rgba(255, 255, 255, 0.2);
-  font-family: 'Space Grotesk', sans-serif;
+  text-shadow: var(--text-shadow-light);
+  font-family: var(--font-primary);
   letter-spacing: -0.02em;
 }
 
@@ -34,7 +32,7 @@
 
 .cv-bio-row {
   display: flex;
-  gap: 20px;
+  gap: var(--gap-lg);
   margin: 0 auto 20px auto;
   max-width: 1400px;
   align-items: stretch;
@@ -43,45 +41,35 @@
 .cv-bio-card {
   flex: 0 1 80%;
   max-width: 1000px;
-  background:
-    linear-gradient(135deg,
-      rgba(255, 255, 255, 0.12) 0%,
-      rgba(255, 255, 255, 0.08) 100%);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 28px;
+  background: var(--glass-bg-primary);
+  backdrop-filter: var(--backdrop-blur-xl);
+  -webkit-backdrop-filter: var(--backdrop-blur-xl);
+  border: var(--glass-border);
+  border-radius: var(--radius-xl);
   padding: 20px 25px;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.15),
-    0 10px 40px rgba(0, 0, 0, 0.2);
+  transition: var(--transition-slow);
+  box-shadow: var(--shadow-combined);
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: var(--gap-lg);
 }
 
 .cv-bio-card:hover {
-  background:
-    linear-gradient(135deg,
-      rgba(255, 255, 255, 0.18) 0%,
-      rgba(255, 255, 255, 0.12) 100%);
-  border-color: rgba(255, 255, 255, 0.3);
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.2),
-    0 15px 50px rgba(0, 0, 0, 0.25);
-  transform: translateY(-2px);
+  background: var(--glass-bg-hover);
+  border-color: var(--color-white-transparent);
+  box-shadow: var(--shadow-combined-hover);
+  transform: var(--transform-hover-lift);
 }
 
 .cv-bio-text {
   position: relative;
-  color: #1a1a1a;
+  color: var(--color-text-primary);
   font-size: 1.05em;
   line-height: 1.7;
   margin: 20px 15px;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: var(--font-primary);
   font-weight: 400;
-  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3);
+  text-shadow: var(--text-shadow-light);
   z-index: 2;
 }
 
@@ -91,8 +79,8 @@
   position: absolute;
   top: -30px;
   left: -20px;
-  color: rgba(34, 197, 94, 0.15);
-  font-family: 'Space Grotesk', sans-serif;
+  color: var(--color-accent-green);
+  font-family: var(--font-primary);
   font-weight: bold;
   z-index: 1;
   line-height: 1;
@@ -104,8 +92,8 @@
   position: absolute;
   bottom: -35px;
   right: -20px;
-  color: rgba(34, 197, 94, 0.15);
-  font-family: 'Space Grotesk', sans-serif;
+  color: var(--color-accent-green);
+  font-family: var(--font-primary);
   font-weight: bold;
   z-index: 1;
   line-height: 1;
@@ -123,16 +111,13 @@
   height: 160px;
   border-radius: 24px;
   object-fit: cover;
-  background:
-    linear-gradient(135deg,
-      rgba(255, 255, 255, 0.15) 0%,
-      rgba(255, 255, 255, 0.1) 100%);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  background: var(--glass-bg-button);
+  backdrop-filter: var(--backdrop-blur-xl);
+  -webkit-backdrop-filter: var(--backdrop-blur-xl);
   border: 3px solid rgba(255, 255, 255, 0.4);
   padding: 3px;
   transform: rotate(3deg);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-slow);
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.2),
     0 10px 40px rgba(0, 0, 0, 0.3),
@@ -153,53 +138,40 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  background:
-    linear-gradient(135deg,
-      rgba(255, 255, 255, 0.25) 0%,
-      rgba(255, 255, 255, 0.15) 100%);
-  backdrop-filter: blur(15px) saturate(1.2);
-  -webkit-backdrop-filter: blur(15px) saturate(1.2);
-  border: 1.5px solid rgba(255, 255, 255, 0.4);
-  border-radius: 16px;
-  padding: 20px 30px;
-  color: white;
-  font-family: 'Space Grotesk', sans-serif;
-  font-weight: 600;
-  font-size: 0.95em;
+  gap: var(--gap-xs);
+  background: var(--gradient-accent);
+  backdrop-filter: var(--backdrop-blur-lg);
+  -webkit-backdrop-filter: var(--backdrop-blur-lg);
+  border: var(--gradient-accent-border);
+  border-radius: var(--radius-sm);
+  padding: 10px 20px;
+  color: var(--color-text-primary);
+  font-family: var(--font-primary);
+  font-weight: 500;
+  font-size: 0.9rem;
   text-decoration: none;
   cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.3),
-    0 8px 24px rgba(0, 0, 0, 0.15);
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  transition: var(--transition-fast);
+  box-shadow: var(--shadow-sm);
+  text-shadow: var(--text-shadow-light);
   white-space: nowrap;
 }
 
 .cv-download-button-inline:hover {
-  background:
-    linear-gradient(135deg,
-      rgba(255, 255, 255, 0.35) 0%,
-      rgba(255, 255, 255, 0.22) 100%);
-  border-color: rgba(255, 255, 255, 0.5);
-  transform: translateY(-2px);
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.4),
-    0 12px 32px rgba(0, 0, 0, 0.2);
+  background: var(--gradient-accent-hover);
+  border: var(--gradient-accent-border-hover);
+  transform: var(--transform-hover-lift);
+  box-shadow: var(--shadow-inset-strong), 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
 .cv-download-button-inline:active {
-  transform: translateY(0);
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.25),
-    0 4px 16px rgba(0, 0, 0, 0.15);
+  transform: translateY(-1px);
 }
 
 .cv-download-button-inline .download-icon {
   font-size: 2em;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
-  animation: bounce 2s ease-in-out infinite;
+  filter: var(--filter-drop-shadow-sm);
+  animation: bounce var(--animation-duration-slow) ease-in-out infinite;
 }
 
 @keyframes bounce {
@@ -226,59 +198,49 @@
 }
 
 .cv-card {
-  background:
-    linear-gradient(135deg,
-      rgba(255, 255, 255, 0.12) 0%,
-      rgba(255, 255, 255, 0.08) 100%);
-  backdrop-filter: blur(20px) saturate(1.2);
-  -webkit-backdrop-filter: blur(20px) saturate(1.2);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 20px;
+  background: var(--glass-bg-primary);
+  backdrop-filter: var(--backdrop-blur-xl);
+  -webkit-backdrop-filter: var(--backdrop-blur-xl);
+  border: var(--glass-border);
+  border-radius: var(--radius-lg);
   padding: 30px;
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.25),
-    0 10px 40px rgba(0, 0, 0, 0.15);
-  transition: all 0.3s ease;
+  box-shadow: var(--shadow-combined);
+  transition: var(--transition-fast);
 }
 
 .cv-card:hover {
-  background:
-    linear-gradient(135deg,
-      rgba(255, 255, 255, 0.18) 0%,
-      rgba(255, 255, 255, 0.12) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.35),
-    0 12px 50px rgba(0, 0, 0, 0.2);
-  transform: translateY(-2px);
+  background: var(--glass-bg-hover);
+  border: var(--glass-border-hover);
+  box-shadow: var(--shadow-combined-hover);
+  transform: var(--transform-hover-lift);
 }
 
 .cv-card-title {
   display: flex;
   align-items: center;
-  gap: 12px;
-  color: #1a1a1a;
+  gap: var(--gap-sm);
+  color: var(--color-text-primary);
   font-size: 1.5em;
   font-weight: 700;
   margin: 0 0 25px 0;
-  font-family: 'Space Grotesk', 'Inter', sans-serif;
-  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3);
+  font-family: var(--font-primary);
+  text-shadow: var(--text-shadow-light);
 }
 
 .cv-icon {
   font-size: 1.2em;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+  filter: var(--filter-drop-shadow-sm);
 }
 
 .cv-items {
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: var(--gap-xl);
 }
 
 .cv-item {
   padding-bottom: 25px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  border-bottom: 1px solid var(--color-border-light);
 }
 
 .cv-item:last-child {
@@ -290,7 +252,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 15px;
+  gap: var(--gap-md);
 }
 
 .cv-item-text {
@@ -301,55 +263,55 @@
   width: 60px;
   height: 60px;
   object-fit: contain;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
-  transition: all 0.3s ease;
+  filter: var(--filter-drop-shadow-xs);
+  transition: var(--transition-fast);
 }
 
 .cv-university-logo:hover {
   transform: scale(1.1);
-  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+  filter: var(--filter-drop-shadow-sm);
 }
 
 .cv-item-title {
-  color: #1a1a1a;
+  color: var(--color-text-primary);
   font-size: 1.15em;
   font-weight: 600;
   margin: 0 0 8px 0;
-  font-family: 'Space Grotesk', 'Inter', sans-serif;
-  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.2);
+  font-family: var(--font-primary);
+  text-shadow: var(--text-shadow-light);
 }
 
 .cv-item-org {
-  color: rgba(0, 0, 0, 0.75);
+  color: var(--color-text-light);
   font-size: 1em;
   font-weight: 500;
   margin: 0 0 6px 0;
-  font-family: 'Space Grotesk', 'Inter', sans-serif;
+  font-family: var(--font-primary);
 }
 
 .cv-item-period {
-  color: rgba(0, 0, 0, 0.6);
+  color: var(--color-text-lightest);
   font-size: 0.9em;
   font-weight: 500;
   margin: 0 0 12px 0;
-  font-family: 'Space Grotesk', 'Inter', sans-serif;
+  font-family: var(--font-primary);
 }
 
 .cv-item-location {
-  color: rgba(0, 0, 0, 0.65);
+  color: var(--color-text-lighter);
   font-size: 0.85em;
   font-weight: 500;
   margin: 0 0 12px 0;
-  font-family: 'Space Grotesk', 'Inter', sans-serif;
+  font-family: var(--font-primary);
 }
 
 .cv-item-details,
 .cv-item-description {
-  color: rgba(0, 0, 0, 0.7);
+  color: var(--color-text-muted);
   font-size: 0.95em;
   line-height: 1.6;
   margin: 0;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: var(--font-primary);
 }
 
 .cv-card-skills {
@@ -359,58 +321,40 @@
 .cv-skills-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: var(--gap-sm);
 }
 
 .cv-skill-tag {
-  background:
-    linear-gradient(135deg,
-      rgba(255, 255, 255, 0.15) 0%,
-      rgba(255, 255, 255, 0.08) 100%);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 12px;
+  background: var(--glass-bg-button);
+  backdrop-filter: var(--backdrop-blur-md);
+  -webkit-backdrop-filter: var(--backdrop-blur-md);
+  border: var(--glass-border);
+  border-radius: var(--radius-sm);
   padding: 10px 16px;
-  color: #1a1a1a;
+  color: var(--color-text-primary);
   font-size: 0.9em;
   font-weight: 500;
-  font-family: 'Space Grotesk', 'Inter', sans-serif;
-  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3);
-  transition: all 0.3s ease;
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.2),
-    0 4px 12px rgba(0, 0, 0, 0.15);
+  font-family: var(--font-primary);
+  text-shadow: var(--text-shadow-light);
+  transition: var(--transition-fast);
+  box-shadow: var(--shadow-sm);
 }
 
 .cv-skill-tag:hover {
-  background:
-    linear-gradient(135deg,
-      rgba(255, 255, 255, 0.25) 0%,
-      rgba(255, 255, 255, 0.15) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  transform: translateY(-2px);
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.3),
-    0 6px 16px rgba(0, 0, 0, 0.2);
+  background: var(--glass-bg-button-hover);
+  border: var(--glass-border-strong);
+  transform: var(--transform-hover-lift);
+  box-shadow: var(--shadow-inset-strong), 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 
 .cv-card-download {
-  background:
-    linear-gradient(135deg,
-      rgba(255, 99, 71, 0.12) 0%,
-      rgba(255, 20, 147, 0.1) 50%,
-      rgba(138, 43, 226, 0.1) 100%);
-  border: 1px solid rgba(255, 99, 71, 0.3);
+  background: var(--gradient-accent);
+  border: var(--gradient-accent-border);
 }
 
 .cv-card-download:hover {
-  background:
-    linear-gradient(135deg,
-      rgba(255, 99, 71, 0.18) 0%,
-      rgba(255, 20, 147, 0.15) 50%,
-      rgba(138, 43, 226, 0.15) 100%);
-  border: 1px solid rgba(255, 99, 71, 0.4);
+  background: var(--gradient-accent-hover);
+  border: var(--gradient-accent-border-hover);
 }
 
 .cv-download-content {
@@ -418,47 +362,42 @@
 }
 
 .cv-download-title {
-  color: #1a1a1a;
+  color: var(--color-text-primary);
   font-size: 1.1em;
   font-weight: 700;
   margin: 0 0 8px 0;
-  font-family: 'Space Grotesk', 'Inter', sans-serif;
-  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3);
+  font-family: var(--font-primary);
+  text-shadow: var(--text-shadow-light);
 }
 
 .cv-download-description {
-  color: rgba(0, 0, 0, 0.7);
+  color: var(--color-text-muted);
   font-size: 0.85em;
   line-height: 1.5;
   margin: 0 0 18px 0;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: var(--font-primary);
 }
 
 .cv-download-button {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: var(--gap-xs);
   align-self: flex-start;
-  background:
-    linear-gradient(135deg,
-      rgba(255, 255, 255, 0.2) 0%,
-      rgba(255, 255, 255, 0.12) 100%);
-  backdrop-filter: blur(15px) saturate(1.2);
-  -webkit-backdrop-filter: blur(15px) saturate(1.2);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 12px;
+  background: var(--glass-bg-button-hover);
+  backdrop-filter: var(--backdrop-blur-lg);
+  -webkit-backdrop-filter: var(--backdrop-blur-lg);
+  border: var(--glass-border-hover);
+  border-radius: var(--radius-sm);
   padding: 10px 20px;
-  color: #1a1a1a;
-  font-family: 'Space Grotesk', sans-serif;
+  color: var(--color-text-primary);
+  font-family: var(--font-primary);
   font-weight: 600;
   font-size: 0.9em;
   text-decoration: none;
   cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.3),
-    0 6px 20px rgba(0, 0, 0, 0.2);
-  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3);
+  transition: var(--transition-smooth);
+  box-shadow: var(--shadow-inset-strong), 0 6px 20px rgba(0, 0, 0, 0.2);
+  text-shadow: var(--text-shadow-light);
 }
 
 .cv-download-button:hover {
@@ -479,7 +418,7 @@
 
 .download-icon {
   font-size: 1.2em;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+  filter: var(--filter-drop-shadow-sm);
 }
 
 @media screen and (max-width: 1024px) {
@@ -511,6 +450,11 @@
 }
 
 @media screen and (max-width: 900px) {
+  .cv-section {
+    margin: var(--section-margin-tablet);
+    padding: var(--section-padding-tablet);
+  }
+
   .cv-bio-card {
     flex-direction: column;
     gap: 15px;
@@ -528,10 +472,7 @@
 }
 
 @media screen and (max-width: 768px) {
-  .cv-section {
-    margin: 30px 20px;
-    padding: 35px 25px;
-  }
+
 
   .cv-title {
     font-size: 2rem;
@@ -604,8 +545,8 @@
 
 @media screen and (max-width: 480px) {
   .cv-section {
-    margin: 15px;
-    padding: 25px 20px;
+    margin: var(--section-margin-mobile);
+    padding: var(--section-padding-mobile);
   }
 
   .cv-title {

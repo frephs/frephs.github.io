@@ -1,11 +1,11 @@
 .projects-section {
-  margin: 20px 50px 50px 50px;
+  margin: var(--section-margin-desktop);
   position: relative;
   padding: 3px;
-  border-radius: 28px;
-  transition: all 0.3s ease;
+  border-radius: var(--radius-xl);
+  transition: var(--transition-fast);
   scroll-snap-align: start;
-  scroll-margin-top: 80px;
+  scroll-margin-top: var(--scroll-margin-top);
   min-height: calc(100vh - 160px);
   overflow: visible;
 }
@@ -14,7 +14,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  border-radius: 28px;
+  border-radius: var(--radius-xl);
   padding: 3px;
   background: linear-gradient(90deg,
       rgba(255, 99, 71, 0.8),
@@ -66,11 +66,11 @@
 
 .project-card {
   background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 20px;
+  border: var(--glass-border);
+  border-radius: var(--radius-lg);
   padding: 3px;
   overflow: hidden;
-  transition: all 0.3s ease;
+  transition: var(--transition-fast);
   width: 100%;
   position: relative;
   display: inline-block;
@@ -90,16 +90,16 @@
   right: 0;
   bottom: 0;
   background: rgba(255, 255, 255, 0.8);
-  border-radius: 20px;
+  border-radius: var(--radius-lg);
   z-index: -1;
 }
 
 .project-card .project-link {
   background: rgba(255, 255, 255, 0.97);
-  backdrop-filter: blur(10px) saturate(1.05);
-  -webkit-backdrop-filter: blur(10px) saturate(1.05);
+  backdrop-filter: var(--backdrop-blur-md);
+  -webkit-backdrop-filter: var(--backdrop-blur-md);
   border: 1px solid rgba(255, 255, 255, 0.25);
-  border-radius: 18px;
+  border-radius: var(--radius-md);
   margin: 0;
   display: block;
   box-shadow:
@@ -108,11 +108,11 @@
 }
 
 .project-card:not(.no-preview) .project-link {
-  border-radius: 18px 18px 0 0;
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
 }
 
 .project-card.no-preview .project-link {
-  border-radius: 18px;
+  border-radius: var(--radius-md);
 }
 
 .project-card.no-preview {
@@ -122,7 +122,7 @@
 .project-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 24px rgba(31, 38, 135, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  border: var(--glass-border-strong);
 }
 
 
@@ -167,13 +167,13 @@
 .project-name {
   font-size: 1.3rem;
   font-weight: 700;
-  color: #333;
-  font-family: 'Space Grotesk', sans-serif;
+  color: var(--color-text-secondary);
+  font-family: var(--font-primary);
   line-height: 1.2;
 }
 
 .project-description {
-  color: #666;
+  color: var(--color-project-description);
   line-height: 1.5;
   margin-bottom: 1rem;
   font-size: 0.95rem;
@@ -189,7 +189,7 @@
   background: rgba(138, 43, 226, 0.8);
   color: white;
   padding: 0.35rem 1.5rem;
-  border-radius: 10px;
+  border-radius: var(--radius-xs);
   font-size: 0.8rem;
   font-weight: 500;
   box-shadow: 0 2px 8px rgba(138, 43, 226, 0.08);
@@ -201,7 +201,7 @@
   position: relative;
   height: 200px;
   background: white;
-  border-radius: 0 0 18px 18px;
+  border-radius: 0 0 var(--radius-md) var(--radius-md);
   overflow: hidden;
 }
 
@@ -227,8 +227,8 @@
   align-items: center;
   justify-content: center;
   opacity: 0;
-  transition: opacity 0.3s ease;
-  color: white;
+  transition: opacity var(--animation-duration-fast) ease;
+  color: var(--color-white);
   font-weight: 600;
   backdrop-filter: blur(2px);
 }
@@ -250,7 +250,7 @@
 
 @media screen and (max-width: 768px) {
   .projects-section {
-    margin: 30px 20px;
+    margin: var(--section-margin-tablet);
   }
 
   .projects-grid {
@@ -286,7 +286,7 @@
 
 @media screen and (max-width: 480px) {
   .projects-section {
-    margin: 15px;
+    margin: var(--section-margin-mobile);
   }
 
   .projects-grid {

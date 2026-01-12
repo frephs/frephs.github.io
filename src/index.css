@@ -1,11 +1,112 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap');
 
 :root {
-  font-family: 'Space Grotesk', sans-serif;
+  /* Fonts */
+  --font-primary: 'Space Grotesk', sans-serif;
+  --font-secondary: 'Inter', sans-serif;
+
+  /* Colors */
+  --color-bg: #f8fafc;
+  --color-text-primary: #1a1a1a;
+  --color-text-secondary: #333;
+  --color-text-muted: rgba(0, 0, 0, 0.7);
+  --color-text-light: rgba(0, 0, 0, 0.75);
+  --color-text-lighter: rgba(0, 0, 0, 0.65);
+  --color-text-lightest: rgba(0, 0, 0, 0.6);
+  --color-white: white;
+  --color-white-transparent: rgba(255, 255, 255, 0.3);
+  --color-border-light: rgba(0, 0, 0, 0.15);
+  --color-accent-green: rgba(34, 197, 94, 0.15);
+  --color-accent-pink: rgba(255, 20, 147, 0.15);
+  --color-project-description: #666;
+  --color-quote-text: #374151;
+  --color-quote-text-muted: rgba(55, 65, 81, 0.7);
+
+  /* Border Radius */
+  --radius-xl: 28px;
+  --radius-lg: 20px;
+  --radius-md: 18px;
+  --radius-sm: 12px;
+  --radius-xs: 10px;
+
+  /* Spacing */
+  --section-margin-desktop: 20px 50px;
+  --section-margin-tablet: 20px;
+  --section-margin-mobile: 15px;
+  --section-padding-desktop: 30px 50px;
+  --section-padding-tablet: 30px 25px;
+  --section-padding-mobile: 20px;
+  --gap-xs: 8px;
+  --gap-sm: 10px;
+  --gap-md: 15px;
+  --gap-lg: 20px;
+  --gap-xl: 25px;
+
+  /* Scroll */
+  --scroll-margin-top: 80px;
+  --scroll-padding-tablet: 120px;
+  --scroll-padding-mobile: 100px;
+
+  /* Backdrop Filters */
+  --backdrop-blur-xl: blur(20px) saturate(1.2);
+  --backdrop-blur-lg: blur(15px) saturate(1.2);
+  --backdrop-blur-md: blur(10px) saturate(1.05);
+
+  /* Filters */
+  --filter-drop-shadow-sm: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+  --filter-drop-shadow-md: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+  --filter-drop-shadow-xs: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+  --filter-white-icon: brightness(0) saturate(100%) invert(100%) drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
+  --filter-white-icon-hover: brightness(0) saturate(100%) invert(100%) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+
+  /* Animations */
+  --animation-duration-fast: 0.3s;
+  --animation-duration-slow: 2s;
+  --animation-timing: ease;
+
+  /* Glass Morphism */
+  --glass-bg-primary: linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.08) 100%);
+  --glass-bg-hover: linear-gradient(135deg, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0.12) 100%);
+  --glass-bg-button: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.08) 100%);
+  --glass-bg-button-hover: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.15) 100%);
+  --glass-border: 1px solid rgba(255, 255, 255, 0.2);
+  --glass-border-hover: 1px solid rgba(255, 255, 255, 0.3);
+  --glass-border-strong: 1px solid rgba(255, 255, 255, 0.4);
+
+  /* Gradient Accent */
+  --gradient-accent: linear-gradient(135deg, rgba(255, 99, 71, 0.12) 0%, rgba(255, 20, 147, 0.1) 50%, rgba(138, 43, 226, 0.1) 100%);
+  --gradient-accent-hover: linear-gradient(135deg, rgba(255, 99, 71, 0.18) 0%, rgba(255, 20, 147, 0.15) 50%, rgba(138, 43, 226, 0.15) 100%);
+  --gradient-accent-border: 1px solid rgba(255, 99, 71, 0.3);
+  --gradient-accent-border-hover: 1px solid rgba(255, 99, 71, 0.4);
+
+  /* Shadows */
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 10px 40px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 12px 50px rgba(0, 0, 0, 0.2);
+  --shadow-inset: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  --shadow-inset-strong: inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  --shadow-combined: var(--shadow-inset), var(--shadow-md);
+  --shadow-combined-hover: inset 0 1px 0 rgba(255, 255, 255, 0.35), 0 12px 50px rgba(0, 0, 0, 0.2);
+
+  /* Text Shadows */
+  --text-shadow-light: 1px 1px 2px rgba(255, 255, 255, 0.3);
+  --text-shadow-strong: 2px 2px 8px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 255, 255, 0.1);
+  --text-shadow-subtle: 1px 1px 3px rgba(0, 0, 0, 0.3);
+
+  /* Transitions */
+  --transition-fast: all 0.3s ease;
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Transforms */
+  --transform-hover-lift: translateY(-2px);
+  --transform-hover-lift-strong: translateY(-3px);
+
+  font-family: var(--font-primary);
   line-height: 1.5;
   font-weight: 400;
   color-scheme: light;
-  background-color: #f8fafc;
+  background-color: var(--color-bg);
 }
 
 * {
@@ -17,13 +118,13 @@
 html {
   scroll-behavior: smooth;
   scroll-snap-type: y proximity;
-  scroll-padding-top: 100px;
+  scroll-padding-top: var(--scroll-margin-top);
 }
 
 body {
-  font-family: 'Space Grotesk', sans-serif;
-  background-color: #f8fafc;
-  color: #333;
+  font-family: var(--font-primary);
+  background-color: var(--color-bg);
+  color: var(--color-text-secondary);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -41,7 +142,7 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: var(--color-text-primary);
   cursor: pointer;
   transition: border-color 0.25s;
 }
@@ -57,13 +158,13 @@ button:focus-visible {
 
 @media screen and (max-width: 900px) {
   html {
-    scroll-padding-top: 120px;
+    scroll-padding-top: var(--scroll-padding-tablet);
   }
 }
 
 @media screen and (max-width: 600px) {
   html {
-    scroll-padding-top: 100px;
+    scroll-padding-top: var(--scroll-padding-mobile);
   }
 }
 
