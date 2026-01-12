@@ -1,14 +1,6 @@
 import React from "react";
 import "./CVSection.css";
 
-interface Experience {
-  title: string;
-  organization: string;
-  period: string;
-  description: string;
-  location?: string;
-}
-
 interface Education {
   degree: string;
   institution: string;
@@ -26,27 +18,6 @@ const education: Education[] = [
     degree: "Bachelor's Degree in Computer Science and Engineering",
     institution: "Politecnico di Milano",
     period: "2021 - 2025",
-  },
-];
-
-const interests = [
-  {
-    icon: "🎨",
-    title: "Creative Coding",
-    description:
-      "Exploring the intersection of art and technology through generative design and interactive experiences.",
-  },
-  {
-    icon: "🌐",
-    title: "Open Source",
-    description:
-      "Contributing to open-source projects and building tools that empower the developer community.",
-  },
-  {
-    icon: "🏳️‍🌈",
-    title: "Community Building",
-    description:
-      "Active in LGBTQ+ advocacy and creating inclusive spaces in tech communities.",
   },
 ];
 
