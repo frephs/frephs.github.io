@@ -41,19 +41,19 @@ export const CVSection: React.FC = () => {
       <h2 className="cv-title">About me</h2>
       <div className="cv-bio-row">
         <div className="cv-bio-card">
+          <div className="cv-profile-container">
+            <img
+              src="/img/profile.jpg"
+              alt="Francesco Genovese"
+              className="cv-profile-pic"
+            />
+          </div>
           <p className="cv-bio-text">
             I'm a Computer Science and Engineering student at Politecnico di
             Milano, passionate about building software to solve complex
             problems. With experience in full-stack development, I love creating
             tools that make a difference.
           </p>
-        </div>
-        <div className="cv-profile-container">
-          <img
-            src="/img/profile.jpg"
-            alt="Francesco Genovese"
-            className="cv-profile-pic"
-          />
         </div>
         <a
           href="/Francesco_Genovese_CV.pdf"
