@@ -52,7 +52,9 @@ export const ContactsSection: React.FC = () => {
       <div className="contacts-navbar">
         <div className="contacts-footer-info">
           <p className="footer-text">© 2026 Francesco Genovese</p>
-          <p className="footer-subtext">Built with React & TypeScript</p>
+          <p className="footer-subtext">
+            Built with <span className="heart-icon">❤️</span> by yours truly
+          </p>
         </div>
         <div className="contacts-icons">
           {contacts.map((contact, index) => (

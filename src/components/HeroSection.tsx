@@ -83,7 +83,7 @@ export const HeroSection: React.FC = () => {
         <nav className="hero-navbar">
           <div className="navbar-left">
             <img
-              src="/img/profile.jpg"
+              src="/img/profile_picture.jpg"
               alt="Francesco Genovese"
               className="profile-picture"
             />

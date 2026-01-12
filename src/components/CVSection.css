@@ -156,42 +156,84 @@
   gap: 8px;
   background:
     linear-gradient(135deg,
-      rgba(255, 255, 255, 0.2) 0%,
-      rgba(255, 255, 255, 0.12) 100%);
-  backdrop-filter: blur(15px) saturate(1.2);
-  -webkit-backdrop-filter: blur(15px) saturate(1.2);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+      rgba(255, 99, 71, 0.25) 0%,
+      rgba(255, 20, 147, 0.2) 50%,
+      rgba(138, 43, 226, 0.2) 100%);
+  backdrop-filter: blur(15px) saturate(1.4);
+  -webkit-backdrop-filter: blur(15px) saturate(1.4);
+  border: 2px solid rgba(255, 99, 71, 0.4);
   border-radius: 28px;
   padding: 25px;
   color: #1a1a1a;
   font-family: 'Space Grotesk', sans-serif;
-  font-weight: 600;
-  font-size: 0.9em;
+  font-weight: 700;
+  font-size: 0.95em;
   text-decoration: none;
   cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.3),
-    0 10px 40px rgba(0, 0, 0, 0.2);
-  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3);
+    inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    0 10px 40px rgba(255, 20, 147, 0.3),
+    0 0 30px rgba(138, 43, 226, 0.2);
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.4);
   white-space: nowrap;
+  animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.4),
+      0 10px 40px rgba(255, 20, 147, 0.3),
+      0 0 30px rgba(138, 43, 226, 0.2);
+  }
+
+  50% {
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.5),
+      0 12px 45px rgba(255, 20, 147, 0.4),
+      0 0 40px rgba(138, 43, 226, 0.3);
+  }
 }
 
 .cv-download-button-inline:hover {
   background:
     linear-gradient(135deg,
-      rgba(255, 255, 255, 0.3) 0%,
-      rgba(255, 255, 255, 0.18) 100%);
-  border-color: rgba(255, 255, 255, 0.45);
-  transform: translateY(-2px);
+      rgba(255, 99, 71, 0.35) 0%,
+      rgba(255, 20, 147, 0.3) 50%,
+      rgba(138, 43, 226, 0.3) 100%);
+  border-color: rgba(255, 99, 71, 0.6);
+  transform: translateY(-4px) scale(1.05);
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.4),
-    0 15px 50px rgba(0, 0, 0, 0.3);
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    0 20px 60px rgba(255, 20, 147, 0.5),
+    0 0 50px rgba(138, 43, 226, 0.4);
+  animation: none;
 }
 
 .cv-download-button-inline .download-icon {
-  font-size: 2em;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+  font-size: 2.2em;
+  filter: drop-shadow(0 2px 6px rgba(255, 20, 147, 0.4));
+  animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.cv-download-button-inline:hover .download-icon {
+  animation: none;
+  transform: scale(1.1);
 }
 
 .cv-column {
@@ -485,6 +527,23 @@
   }
 }
 
+@media screen and (max-width: 900px) {
+  .cv-bio-card {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .cv-profile-container {
+    max-width: 150px;
+  }
+
+  .cv-profile-pic {
+    width: 130px;
+    height: 130px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .cv-section {
     margin: 30px 20px;
@@ -504,13 +563,15 @@
   .cv-bio-card {
     flex: 1 1 auto;
     max-width: 100%;
-    padding: 30px 35px;
+    padding: 20px;
     margin-bottom: 25px;
+    flex-direction: column;
+    gap: 15px;
   }
 
   .cv-profile-container {
     width: 100%;
-    max-width: 250px;
+    max-width: 150px;
   }
 
   .cv-download-button-inline {
@@ -527,8 +588,8 @@
   }
 
   .cv-profile-pic {
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
   }
 
   .cv-bio-text {
@@ -569,13 +630,14 @@
   }
 
   .cv-bio-card {
-    padding: 25px 20px;
+    padding: 15px;
     margin-bottom: 20px;
+    gap: 12px;
   }
 
   .cv-profile-pic {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
   }
 
   .cv-bio-text {

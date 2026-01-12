@@ -92,6 +92,34 @@
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
   font-family: 'Space Grotesk', sans-serif;
   letter-spacing: 0.01em;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.heart-icon {
+  display: inline-block;
+  font-size: 1.1em;
+  animation: heartbeat 1.5s ease-in-out infinite;
+  filter: drop-shadow(0 0 8px rgba(255, 20, 147, 0.6));
+  image-rendering: pixelated;
+  -ms-interpolation-mode: nearest-neighbor;
+}
+
+@keyframes heartbeat {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  25% {
+    transform: scale(1.15);
+  }
+
+  50% {
+    transform: scale(1);
+  }
 }
 
 .contacts-icons {
