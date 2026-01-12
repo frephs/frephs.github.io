@@ -4,11 +4,15 @@ import "./HeroSection.css";
 
 export const HeroSection: React.FC = () => {
   const [activeSection, setActiveSection] = useState<string>("");
+  const [isScrolled, setIsScrolled] = useState<boolean>(false);
 
   useEffect(() => {
     const updateActiveSection = () => {
       const sections = ["cv", "projects", "quotes", "contacts"];
       const navbarHeight = 140; // Height of sticky navbar + padding
+
+      // Update scroll state for mobile navbar
+      setIsScrolled(window.scrollY > 50);
 
       // Check if we're at the very bottom of the page
       const scrollBottom = window.scrollY + window.innerHeight;
@@ -78,9 +82,9 @@ export const HeroSection: React.FC = () => {
   };
 
   return (
-    <div className="hero-wrapper">
+    <div className={`hero-wrapper ${isScrolled ? "scrolled" : ""}`}>
       <div className="hero-section">
-        <nav className="hero-navbar">
+        <nav className={`hero-navbar ${isScrolled ? "scrolled" : ""}`}>
           <div className="navbar-left">
             <img
               src="/img/profile_picture.jpg"

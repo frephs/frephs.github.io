@@ -17,7 +17,7 @@
 html {
   scroll-behavior: smooth;
   scroll-snap-type: y proximity;
-  scroll-padding-top: 140px;
+  scroll-padding-top: 100px;
 }
 
 body {
@@ -55,10 +55,22 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+@media screen and (max-width: 900px) {
+  html {
+    scroll-padding-top: 120px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  html {
+    scroll-padding-top: 100px;
+  }
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
-    background-color: #ffffff;
+    background-color: #f4f4f4;
   }
 
   a:hover {
