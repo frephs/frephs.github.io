@@ -11,8 +11,14 @@ export const HeroSection: React.FC = () => {
       const sections = ["cv", "projects", "quotes", "contacts"];
       const navbarHeight = 140; // Height of sticky navbar + padding
 
-      // Update scroll state for mobile navbar
-      setIsScrolled(window.scrollY > 50);
+      // Update scroll state for mobile navbar with hysteresis to prevent stuttering
+      // Use different thresholds for scrolling down (70px) vs up (30px)
+      const currentScroll = window.scrollY;
+      if (!isScrolled && currentScroll > 70) {
+        setIsScrolled(true);
+      } else if (isScrolled && currentScroll < 30) {
+        setIsScrolled(false);
+      }
 
       // Check if we're at the very bottom of the page
       const scrollBottom = window.scrollY + window.innerHeight;
