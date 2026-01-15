@@ -23,6 +23,12 @@
   }
 }
 
+@media screen and (max-width: 433px) {
+  .App {
+    padding: 0 10px;
+  }
+}
+
 .main-content {
   padding: 0;
 }

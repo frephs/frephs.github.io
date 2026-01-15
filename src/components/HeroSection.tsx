@@ -5,6 +5,7 @@ import "./HeroSection.css";
 export const HeroSection: React.FC = () => {
   const [activeSection, setActiveSection] = useState<string>("");
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
+  const scrolledRef = React.useRef<boolean>(false);
 
   useEffect(() => {
     const updateActiveSection = () => {
@@ -14,9 +15,13 @@ export const HeroSection: React.FC = () => {
       // Update scroll state for mobile navbar with hysteresis to prevent stuttering
       // Use different thresholds for scrolling down (70px) vs up (30px)
       const currentScroll = window.scrollY;
-      if (!isScrolled && currentScroll > 70) {
+      const wasScrolled = scrolledRef.current;
+
+      if (!wasScrolled && currentScroll > 70) {
+        scrolledRef.current = true;
         setIsScrolled(true);
-      } else if (isScrolled && currentScroll < 30) {
+      } else if (wasScrolled && currentScroll < 30) {
+        scrolledRef.current = false;
         setIsScrolled(false);
       }
 
