@@ -82,6 +82,14 @@ const projects: Project[] = [
       "A browser extension to visualize exam schedules at Politecnico di Milano",
     tech: ["Web Development", "TypeScript", "CI/CD"],
   },
+  {
+    name: "Gnome Sift",
+    link: "https://github.com/frephs/gnome-sift",
+    icon: "🗂️",
+    preview: false,
+    description: "A GNOME app to triage files to clean up your folders",
+    tech: ["GNOME Shell", "Adwaita", "Python", "GTK"],
+  },
 ];
 
 export const ProjectsSection: React.FC = () => {
