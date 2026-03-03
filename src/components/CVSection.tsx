@@ -56,7 +56,7 @@ export const CVSection: React.FC = () => {
           </p>
         </div>
         <a
-          href="/Francesco_Genovese_CV.pdf"
+          href="https://frephs.github.io/cv/"
           download
           className="cv-download-button-inline"
         >
