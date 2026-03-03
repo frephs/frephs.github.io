@@ -16,7 +16,7 @@ const contacts: Contact[] = [
   },
   {
     name: "LinkedIn",
-    link: "https://linkedin.com/in/francescogenovese",
+    link: "https://linkedin.com/in/ffrancescogenovese",
     logo: "/img/linkedin.svg",
   },
   {
