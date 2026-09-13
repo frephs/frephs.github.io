@@ -1,6 +1,6 @@
 import { HeroSection } from "./components/HeroSection";
 import { ProjectsSection } from "./components/ProjectsSection";
-import { CourseworkSection } from "./components/CourseworkSection";
+// import { CourseworkSection } from "./components/CourseworkSection";
 import { CVSection } from "./components/CVSection";
 import { QuotesSection } from "./components/QuotesSection";
 import { ContactsSection } from "./components/ContactsSection";
@@ -13,7 +13,7 @@ function App() {
       <main className="main-content">
         <CVSection />
         <ProjectsSection />
-        <CourseworkSection />
+        {/* <CourseworkSection /> */}
         <QuotesSection />
         <ContactsSection />
       </main>
