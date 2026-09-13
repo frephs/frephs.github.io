@@ -105,7 +105,7 @@ export const HeroSection: React.FC = () => {
             <div className="navbar-info">
               <h2 className="navbar-name">Francesco Genovese</h2>
               <p className="navbar-bio">
-                CS Student @ PoliMi • Consigliere PoliEdro
+                CSE Student @ PoliMi • Consigliere PoliEdro
               </p>
             </div>
           </div>

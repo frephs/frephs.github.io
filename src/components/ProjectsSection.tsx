@@ -75,9 +75,9 @@ const projects: Project[] = [
   },
   {
     name: "Polimi Exam Calendar",
-    link: "https://github.com/frephs/polimi-exam-calendar",
+    link: "https://frephs.github.io/polimi-exam-calendar/",
     icon: "📅",
-    preview: false,
+    preview: true,
     description:
       "A browser extension to visualize exam schedules at Politecnico di Milano",
     tech: ["Web Development", "TypeScript", "CI/CD"],
@@ -95,7 +95,7 @@ const projects: Project[] = [
 export const ProjectsSection: React.FC = () => {
   return (
     <section id="projects" className="projects-section">
-      <h2 className="section-title">Projects</h2>
+      <h2 className="section-title">Side projects</h2>
       <div className="projects-grid">
         {projects.map((project, index) => (
           <div
