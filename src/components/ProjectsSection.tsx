@@ -90,6 +90,15 @@ const projects: Project[] = [
     description: "A GNOME app to triage files to clean up your folders",
     tech: ["GNOME Shell", "Adwaita", "Python", "GTK"],
   },
+  {
+    name: "Gnome Lasso",
+    link: "https://github.com/frephs/gnome-lasso",
+    icon: "🪢",
+    preview: false,
+    description:
+      "Window overview manager extension for GNOME Shell with marquee selection and batch actions",
+    tech: ["GNOME Shell", "JavaScript", "GJS", "Linux"],
+  },
 ];
 
 export const ProjectsSection: React.FC = () => {
