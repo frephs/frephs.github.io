@@ -91,7 +91,6 @@ export const CVSection: React.FC = () => {
         <div className="cv-column">
           <div className="cv-card">
             <h3 className="cv-card-title">
-              <span className="cv-icon">🎓</span>
               Education
             </h3>
             <div className="cv-items">
@@ -121,7 +120,6 @@ export const CVSection: React.FC = () => {
         <div className="cv-column">
           <div className="cv-card cv-card-skills">
             <h3 className="cv-card-title">
-              <span className="cv-icon">⚡</span>
               Skills & Technologies
             </h3>
             <div className="cv-skills-grid">
