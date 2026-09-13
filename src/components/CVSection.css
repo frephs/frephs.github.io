@@ -133,62 +133,97 @@
 }
 
 .cv-download-button-inline {
-  flex-shrink: 0;
+  flex: 0 0 190px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: var(--gap-xs);
-  background: var(--gradient-accent);
-  backdrop-filter: var(--backdrop-blur-lg);
-  -webkit-backdrop-filter: var(--backdrop-blur-lg);
-  border: var(--gradient-accent-border);
-  border-radius: var(--radius-sm);
-  padding: 10px 20px;
+  gap: 14px;
+  background: var(--glass-bg-primary);
+  backdrop-filter: var(--backdrop-blur-xl);
+  -webkit-backdrop-filter: var(--backdrop-blur-xl);
+  border: var(--glass-border);
+  border-radius: var(--radius-xl);
+  padding: 24px 20px;
   color: var(--color-text-primary);
-  font-family: var(--font-primary);
-  font-weight: 500;
-  font-size: 0.9rem;
   text-decoration: none;
   cursor: pointer;
-  transition: var(--transition-fast);
-  box-shadow: var(--shadow-sm);
-  text-shadow: var(--text-shadow-light);
+  transition: var(--transition-smooth);
+  box-shadow: var(--shadow-combined);
   white-space: nowrap;
+  position: relative;
 }
 
 .cv-download-button-inline:hover {
-  background: var(--gradient-accent-hover);
-  border: var(--gradient-accent-border-hover);
+  background: var(--glass-bg-hover);
+  border: var(--glass-border-hover);
   transform: var(--transform-hover-lift);
-  box-shadow: var(--shadow-inset-strong), 0 8px 24px rgba(0, 0, 0, 0.15);
+  box-shadow: var(--shadow-combined-hover);
 }
 
 .cv-download-button-inline:active {
   transform: translateY(-1px);
 }
 
-.cv-download-button-inline .download-icon {
-  font-size: 2em;
-  filter: var(--filter-drop-shadow-sm);
-  animation: bounce var(--animation-duration-slow) ease-in-out infinite;
+.cv-download-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  color: var(--color-text-primary);
+  transition: var(--transition-fast);
 }
 
-@keyframes bounce {
-
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-5px);
-  }
+.cv-download-button-inline:hover .cv-download-icon-wrapper {
+  background: rgba(0, 0, 0, 0.07);
+  border-color: rgba(0, 0, 0, 0.12);
 }
 
-.cv-download-button-inline:hover .download-icon {
-  animation: none;
-  transform: scale(1.1);
+.cv-download-svg {
+  transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.cv-download-button-inline:hover .cv-download-svg {
+  transform: translateY(2px);
+}
+
+.cv-download-text-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+}
+
+.cv-download-primary {
+  font-family: var(--font-primary);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--color-text-primary);
+  letter-spacing: -0.01em;
+}
+
+.cv-download-secondary {
+  font-family: var(--font-secondary);
+  font-weight: 500;
+  font-size: 0.78rem;
+  color: var(--color-text-lighter);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.cv-download-arrow {
+  display: inline-block;
+  font-size: 0.85rem;
+  transition: transform 0.25s ease;
+}
+
+.cv-download-button-inline:hover .cv-download-arrow {
+  transform: translate(2px, -2px);
 }
 
 .cv-column {
@@ -346,81 +381,6 @@
   transform: var(--transform-hover-lift);
   box-shadow: var(--shadow-inset-strong), 0 6px 16px rgba(0, 0, 0, 0.2);
 }
-
-.cv-card-download {
-  background: var(--gradient-accent);
-  border: var(--gradient-accent-border);
-}
-
-.cv-card-download:hover {
-  background: var(--gradient-accent-hover);
-  border: var(--gradient-accent-border-hover);
-}
-
-.cv-download-content {
-  text-align: center;
-}
-
-.cv-download-title {
-  color: var(--color-text-primary);
-  font-size: 1.1em;
-  font-weight: 700;
-  margin: 0 0 8px 0;
-  font-family: var(--font-primary);
-  text-shadow: var(--text-shadow-light);
-}
-
-.cv-download-description {
-  color: var(--color-text-muted);
-  font-size: 0.85em;
-  line-height: 1.5;
-  margin: 0 0 18px 0;
-  font-family: var(--font-primary);
-}
-
-.cv-download-button {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--gap-xs);
-  align-self: flex-start;
-  background: var(--glass-bg-button-hover);
-  backdrop-filter: var(--backdrop-blur-lg);
-  -webkit-backdrop-filter: var(--backdrop-blur-lg);
-  border: var(--glass-border-hover);
-  border-radius: var(--radius-sm);
-  padding: 10px 20px;
-  color: var(--color-text-primary);
-  font-family: var(--font-primary);
-  font-weight: 600;
-  font-size: 0.9em;
-  text-decoration: none;
-  cursor: pointer;
-  transition: var(--transition-smooth);
-  box-shadow: var(--shadow-inset-strong), 0 6px 20px rgba(0, 0, 0, 0.2);
-  text-shadow: var(--text-shadow-light);
-}
-
-.cv-download-button:hover {
-  background:
-    linear-gradient(135deg,
-      rgba(255, 255, 255, 0.3) 0%,
-      rgba(255, 255, 255, 0.18) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.45);
-  transform: translateY(-3px) scale(1.02);
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.4),
-    0 10px 30px rgba(0, 0, 0, 0.3);
-}
-
-.cv-download-button:active {
-  transform: translateY(-1px) scale(1);
-}
-
-.download-icon {
-  font-size: 1.2em;
-  filter: var(--filter-drop-shadow-sm);
-}
-
 @media screen and (max-width: 1024px) {
   .cv-content {
     grid-template-columns: 1fr;
@@ -444,8 +404,21 @@
   }
 
   .cv-download-button-inline {
-    width: 100%;
-    max-width: 300px;
+    flex: 0 0 auto;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    width: auto;
+    min-width: 220px;
+    max-width: 320px;
+    padding: 14px 24px;
+    border-radius: var(--radius-lg);
+  }
+
+  .cv-download-text-group {
+    align-items: flex-start;
+    text-align: left;
   }
 }
 
@@ -500,7 +473,7 @@
 
   .cv-download-button-inline {
     width: 100%;
-    max-width: 250px;
+    max-width: 280px;
   }
 
   .cv-bio-content {
@@ -591,10 +564,6 @@
     font-size: 0.85em;
   }
 
-  .cv-download-button {
-    padding: 12px 24px;
-    font-size: 0.95em;
-  }
 
   .cv-university-logo {
     width: 40px;
